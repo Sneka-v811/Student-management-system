@@ -1,0 +1,161 @@
+:root {
+  --sidebar-width: 240px;
+  --navbar-height: 60px;
+  --brand-color: #4f46e5;
+  --brand-dark: #3730a3;
+}
+
+body {
+  background-color: #f4f6f9;
+  font-family: "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ---------- Login Page ---------- */
+.login-page {
+  background: linear-gradient(135deg, var(--brand-color), var(--brand-dark));
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+}
+
+.login-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-color), var(--brand-dark));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+/* ---------- Navbar ---------- */
+.app-navbar {
+  height: var(--navbar-height);
+  background: linear-gradient(135deg, var(--brand-color), var(--brand-dark));
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.app-navbar .navbar-brand {
+  color: #fff;
+}
+
+/* ---------- Sidebar ---------- */
+.app-sidebar {
+  width: var(--sidebar-width);
+  min-height: calc(100vh - var(--navbar-height));
+  background: #fff;
+  border-right: 1px solid #e9ecef;
+  position: sticky;
+  top: var(--navbar-height);
+  align-self: flex-start;
+  transition: transform 0.25s ease-in-out;
+}
+
+.sidebar-link {
+  color: #495057;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  margin-bottom: 4px;
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #f1f3f9;
+  color: var(--brand-color);
+}
+
+.sidebar-link.active {
+  background-color: var(--brand-color);
+  color: #fff !important;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1020;
+}
+
+@media (max-width: 991.98px) {
+  .app-sidebar {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    height: calc(100vh - var(--navbar-height));
+    transform: translateX(-100%);
+    z-index: 1025;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .app-sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+.app-content {
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+/* ---------- Stat Cards ---------- */
+.stat-card {
+  border-radius: 12px;
+}
+
+.stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* ---------- Student Details ---------- */
+.student-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-color), var(--brand-dark));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.detail-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #f1f3f9;
+  color: var(--brand-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ---------- Misc ---------- */
+.table th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.card {
+  border-radius: 12px;
+}
