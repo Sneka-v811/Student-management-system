@@ -3,6 +3,18 @@
 A complete, production-ready **Student Management System** built with the MERN stack (MongoDB, Express.js, React, Node.js). It provides secure admin authentication and full CRUD functionality for managing student records, with a professional, responsive dashboard.
 
 ---
+## 🚀 Live Demo
+
+- **Frontend:** https://student-management-system-11.netlify.app
+- **Backend API:** https://student-management-system-zo8m.onrender.com
+
+> Note: The backend is hosted on Render's free tier and spins down after inactivity — the first request may take 30-50 seconds to respond while it wakes up.
+
+**Try it yourself:**
+- **Email:** admin@example.com
+- **Password:** Admin@123
+
+---
 
 ## 📋 Table of Contents
 
